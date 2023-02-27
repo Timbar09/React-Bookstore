@@ -7,11 +7,6 @@ const Books = () => {
     { id: '2', title: 'Magical Dancing Feet', author: 'Awesomenho Dos Santos' },
     { id: '3', title: 'Precision and class', author: 'Luka Raadovic' },
   ];
-  // const [bookStore, setBookStore] = useState([
-  //   { id: '1', title: 'The Secret ot Life', author: 'Great Van Author' },
-  //   { id: '2', title: 'Magical Dancing Feet', author: 'Awesomenho Dos Santos' },
-  //   { id: '3', title: 'Precision and class', author: 'Luka Raadovic' },
-  // ]);
 
   return (
     <main>
