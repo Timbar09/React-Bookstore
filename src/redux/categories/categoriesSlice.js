@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -10,12 +11,14 @@ export const categoriesSlice = createSlice({
   initialState,
   reducers: {
     checkStatus: (state) => {
-      const { categories, status } = state;
-      categories.length > 0 ? (status = 'Categories Available!') : (status = 'Under construction!');
+      if (state.categories.length > 0) {
+        state.status = 'Categories Available!';
+      }
+      state.status = 'Under construction!';
     },
   },
 });
 
-export const { checkStatus } = counterSlice.actions;
+export const { checkStatus } = categoriesSlice.actions;
 
 export default categoriesSlice.reducer;
