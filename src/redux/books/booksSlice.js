@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -10,12 +9,20 @@ export const booksSlice = createSlice({
   initialState,
   reducers: {
     addBook: (state, action) => {
+      const newState = { ...state };
       const newBook = action.payload;
-      state.books = [...state.books, newBook];
+
+      newState.books = [...newState.books, newBook];
+
+      return newState;
     },
     removeBook: (state, action) => {
+      const newState = { ...state };
       const targetBookId = action.payload;
-      state.books = state.books.filter((book) => book.book_id !== targetBookId);
+
+      newState.books = newState.books.filter((book) => book.book_id !== targetBookId);
+
+      return newState;
     },
   },
 });
