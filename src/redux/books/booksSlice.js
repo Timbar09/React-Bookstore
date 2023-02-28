@@ -1,5 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const BOOKS_URL =
+  'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oEC3cSalwrw0dzrlODAn/books';
+
 const initialState = {
   books: [
     {
