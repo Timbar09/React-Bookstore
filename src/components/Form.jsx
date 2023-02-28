@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { addBook } from '../redux/books/booksSlice';
+import Button from './Button';
 
 const Form = () => {
   const [title, setTitle] = useState('');
@@ -19,11 +20,10 @@ const Form = () => {
     setAuthor(e.target.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     if (title.trim() && author.trim()) {
       const bookId = `book${books.length + 1}`;
-      console.log(bookId);
+
       dispatch(addBook({ bookId, title, author }));
       setTitle('');
       setAuthor('');
@@ -35,12 +35,12 @@ const Form = () => {
 
   return (
     <section style={{ padding: '1rem' }}>
-      <form style={{ display: 'flex', gap: '1rem' }} onSubmit={handleSubmit}>
+      <form style={{ display: 'flex', gap: '1rem' }}>
         <input type="text" placeholder="Book title" value={title} onChange={handleTitle} />
 
         <input type="text" placeholder="Book Author" value={author} onChange={handleAuthor} />
 
-        <button type="submit">ADD BOOK</button>
+        <Button value="new add book" handleClick={handleSubmit} />
       </form>
       <span>{message}</span>
     </section>
