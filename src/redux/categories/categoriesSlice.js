@@ -18,9 +18,17 @@ export const categoriesSlice = createSlice({
 
       return newState;
     },
+    bookOrigin: (state, action) => {
+      const newState = { ...state };
+      const country = action.payload;
+
+      newState.categories = newState.categories.filter((cartegory) => cartegory.name !== country);
+
+      return newState;
+    },
   },
 });
 
-export const { checkStatus } = categoriesSlice.actions;
+export const { checkStatus, bookOrigin } = categoriesSlice.actions;
 
 export default categoriesSlice.reducer;
