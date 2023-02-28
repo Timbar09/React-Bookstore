@@ -5,14 +5,13 @@ import Form from '../components/Form';
 
 const Books = () => {
   const { books } = useSelector((state) => state.books);
-  // const dispatch = useDispatch();
 
   return (
     <main>
       <section style={{ border: 'solid 1px', padding: '1rem' }}>
         <ul>
           {books.map((book) => (
-            <Book key={book.book_id} book={book} />
+            <Book key={book.bookId} book={book} />
           ))}
         </ul>
       </section>

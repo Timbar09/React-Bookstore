@@ -8,17 +8,16 @@ const Book = ({ book }) => {
     <li style={{ display: 'flex', gap: '1rem' }}>
       <span>{book.title}</span>
       <span>{book.author}</span>
-      <input type="button" value="Delete" onClick={() => dispatch(removeBook(book.book_id))} />
+      <input type="button" value="Delete" onClick={() => dispatch(removeBook(book.bookId))} />
     </li>
   );
 };
 
 Book.propTypes = {
   book: PropTypes.shape({
-    book_id: PropTypes.string.isRequired,
+    bookId: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 
