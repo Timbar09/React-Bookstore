@@ -11,14 +11,14 @@ function Book({ book }) {
     <li style={{ display: 'flex', gap: '1rem' }}>
       <span>{book.title}</span>
       <span>{book.author}</span>
-      <Button value="Delete" handleClick={() => dispatch(removeBook(book.bookId))} />
+      <Button value="Delete" handleClick={() => dispatch(removeBook(book.item_id))} />
     </li>
   );
 }
 
 Book.propTypes = {
   book: PropTypes.shape({
-    bookId: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   }).isRequired,
