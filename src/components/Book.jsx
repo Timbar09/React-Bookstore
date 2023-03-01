@@ -6,19 +6,20 @@ import Button from './Button';
 
 function Book({ book }) {
   const dispatch = useDispatch();
+  const { id, title, author } = book;
 
   return (
     <li style={{ display: 'flex', gap: '1rem' }}>
-      <span>{book.title}</span>
-      <span>{book.author}</span>
-      <Button value="Delete" handleClick={() => dispatch(removeBook(book.item_id))} />
+      <span>{title}</span>
+      <span>{author}</span>
+      <Button value="Delete" handleClick={() => dispatch(removeBook(id))} />
     </li>
   );
 }
 
 Book.propTypes = {
   book: PropTypes.shape({
-    item_id: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   }).isRequired,

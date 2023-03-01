@@ -11,7 +11,7 @@ const Books = () => {
       <section style={{ border: 'solid 1px', padding: '1rem' }}>
         <ul>
           {books.map((book) => (
-            <Book key={book.item_id} book={book} />
+            <Book key={book.id} book={book} />
           ))}
         </ul>
       </section>

@@ -4,10 +4,9 @@ const getBooks = async () => {
   try {
     const response = await fetch(BOOKS_URL);
     const data = await response.json();
-    console.log(data);
-    return data;
+    const dataArray = Object.entries(data).map(([id, data]) => ({ id, ...data[0] }));
+    return dataArray;
   } catch (error) {
-    console.error(error);
     return error.message;
   }
 };
