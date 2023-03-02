@@ -20,7 +20,7 @@ function Book({ book }) {
         <h2>{title}</h2>
         <p className={styles.bookAuthor}>{author}</p>
       </div>
-      <Button value="Delete" handleClick={handleDelete} />
+      <Button value="Delete" handleClick={handleDelete} className={styles.buttonDelete} />
     </li>
   );
 }
