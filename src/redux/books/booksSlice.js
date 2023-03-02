@@ -2,26 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getBooks, storeBook, deleteBook } from '../../api';
 
 const initialState = {
-  books: [
-    // {
-    //   bookId: 'book1',
-    //   title: 'The Great Gatsby',
-    //   author: 'John Smith',
-    //   category: 'Fiction',
-    // },
-    // {
-    //   bookId: 'book2',
-    //   title: 'Anna Karenina',
-    //   author: 'Leo Tolstoy',
-    //   category: 'Fiction',
-    // },
-    // {
-    //   bookId: 'book3',
-    //   title: 'The Selfish Gene',
-    //   author: 'Richard Dawkins',
-    //   category: 'Nonfiction',
-    // },
-  ],
+  books: [],
   isLoading: false,
 };
 
