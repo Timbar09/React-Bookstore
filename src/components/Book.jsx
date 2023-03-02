@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { removeBook, removeBookUI } from '../redux/books/booksSlice';
 
 import Button from './Button';
+import styles from '../styles/Book.module.css';
 
 function Book({ book }) {
   const dispatch = useDispatch();
@@ -14,9 +15,11 @@ function Book({ book }) {
   };
 
   return (
-    <li style={{ display: 'flex', gap: '1rem' }}>
-      <span>{title}</span>
-      <span>{author}</span>
+    <li className={`${styles.book} flex flex-jc-sb flex-ai-c`}>
+      <div className="book-details">
+        <h2>{title}</h2>
+        <p className={styles.bookAuthor}>{author}</p>
+      </div>
       <Button value="Delete" handleClick={handleDelete} />
     </li>
   );

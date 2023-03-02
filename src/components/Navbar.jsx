@@ -10,7 +10,7 @@ const Navbar = () => (
   <header className={styles.header}>
     <nav className={`${styles.nav} container padding-x flex flex-ai-c`}>
       <span>
-        <NavLink to={links[0].path} className={styles.logo} style={{ border: 0 }}>
+        <NavLink to={links[0].path} className={styles.logo} style={{ border: 0, color: '#3183ed' }}>
           Bookstore Miles
         </NavLink>
       </span>

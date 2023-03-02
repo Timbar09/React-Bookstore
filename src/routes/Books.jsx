@@ -8,15 +8,15 @@ const Books = () => {
 
   if (isLoading) {
     return (
-      <main>
+      <div className="loading container padding">
         <h1>Loading...</h1>
-      </main>
+      </div>
     );
   }
 
   return (
-    <main>
-      <section style={{ border: 'solid 1px', padding: '1rem' }}>
+    <div className=" home container padding-x">
+      <section>
         <ul>
           {books.map((book) => (
             <Book key={book.id} book={book} />
@@ -24,7 +24,7 @@ const Books = () => {
         </ul>
       </section>
       <Form />
-    </main>
+    </div>
   );
 };
 

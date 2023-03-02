@@ -4,7 +4,9 @@ import Navbar from './Navbar';
 const Layout = () => (
   <div>
     <Navbar />
-    <Outlet />
+    <main className="main">
+      <Outlet />
+    </main>
   </div>
 );
 
