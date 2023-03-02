@@ -22,7 +22,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title.trim() && author.trim()) {
-      const id = crypto.randomUUID();
+      const id = `${Date()}_${crypto.randomUUID()}`;
 
       dispatch(addBook({ id, title, author }));
       dispatch(addBookUI({ id, title, author }));

@@ -53,12 +53,12 @@ export const booksSlice = createSlice({
       newState.books = [...newState.books, newBook];
       return newState;
     },
-    // removeBook: (state, action) => {
-    //   const newState = { ...state };
-    //   const targetBookId = action.payload;
-    //   newState.books = newState.books.filter((book) => book.item_id !== targetBookId);
-    //   return newState;
-    // },
+    removeBookUI: (state, action) => {
+      const newState = { ...state };
+      const targetBookId = action.payload;
+      newState.books = newState.books.filter((book) => book.id !== targetBookId);
+      return newState;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -86,6 +86,6 @@ export const booksSlice = createSlice({
   },
 });
 
-export const { addBookUI } = booksSlice.actions;
+export const { addBookUI, removeBookUI } = booksSlice.actions;
 
 export default booksSlice.reducer;

@@ -4,7 +4,9 @@ const getBooks = async () => {
   try {
     const response = await fetch(BOOKS_URL);
     const data = await response.json();
-    const dataArray = Object.entries(data).map(([id, data]) => ({ id, ...data[0] }));
+    const dataArray = Object.entries(data)
+      .map(([id, data]) => ({ id, ...data[0] }))
+      .sort((a, b) => a.id.localeCompare(b.id));
     return dataArray;
   } catch (error) {
     return error.message;
