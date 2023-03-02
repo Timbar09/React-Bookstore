@@ -12,8 +12,10 @@ const getBooks = async () => {
 };
 
 const storeBook = async (book) => {
+  const bookCopy = { ...book };
+  bookCopy.item_id = bookCopy.id;
   const data = {
-    ...book,
+    ...bookCopy,
     category: 'Unknown',
   };
 

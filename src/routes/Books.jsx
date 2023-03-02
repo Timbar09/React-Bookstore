@@ -4,7 +4,15 @@ import Book from '../components/Book';
 import Form from '../components/Form';
 
 const Books = () => {
-  const { books } = useSelector((state) => state.books);
+  const { books, isLoading } = useSelector((state) => state.books);
+
+  if (isLoading) {
+    return (
+      <main>
+        <h1>Loading...</h1>
+      </main>
+    );
+  }
 
   return (
     <main>
