@@ -2,6 +2,7 @@
   padding: 1.5rem 3rem;
   border-radius: 0.25em;
   border: solid 1px var(--clr-light-grey);
+  background-color: var(--clr-white);
 }
 
 .book:not(:last-child) {
@@ -10,10 +11,6 @@
 
 .bookAuthor {
   color: var(--clr-blue);
-}
-
-.book input {
-  height: max-content;
 }
 
 .buttonDelete {

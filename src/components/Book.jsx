@@ -17,7 +17,7 @@ function Book({ book }) {
   return (
     <li className={`${styles.book} flex flex-jc-sb flex-ai-c`}>
       <div className="book-details">
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <p className={styles.bookAuthor}>{author}</p>
       </div>
       <Button value="Delete" handleClick={handleDelete} className={styles.buttonDelete} />
