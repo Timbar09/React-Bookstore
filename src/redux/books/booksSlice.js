@@ -29,7 +29,7 @@ export const booksSlice = createSlice({
       const newState = { ...state };
       const newBook = {
         ...action.payload,
-        cartegory: 'Unknown',
+        cartegory: 'Category',
       };
       newState.books = [...newState.books, newBook];
       return newState;
