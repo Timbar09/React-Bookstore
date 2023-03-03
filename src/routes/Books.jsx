@@ -9,14 +9,19 @@ const Books = () => {
   if (isLoading) {
     return (
       <div className="loading container padding">
-        <h1>Loading...</h1>
+        <div className="spinner">
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
       </div>
     );
   }
 
   return (
-    <div className=" home container padding-x">
-      <section>
+    <div className="home container padding-x">
+      <section className="books">
         <ul>
           {books.map((book) => (
             <Book key={book.id} book={book} />
