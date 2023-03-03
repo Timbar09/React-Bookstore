@@ -62,5 +62,7 @@
 }
 
 .errorMessage {
+  display: inline-block;
+  margin-top: 0.25rem;
   color: rgb(229, 45, 45);
 }

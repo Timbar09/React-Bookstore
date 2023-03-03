@@ -10,8 +10,11 @@
   outline-offset: -2px;
   background-color: var(--clr-blue);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  transition: outline 150ms ease-in-out, outline-offset 150ms ease-in-out,
-    background-color 150ms ease-in-out;
+  transition:
+    outline 150ms ease-in-out,
+    outline-offset 150ms ease-in-out,
+    background-color 150ms ease-in-out,
+    opacity 150ms ease-in-out;
 }
 
 .button:hover,
