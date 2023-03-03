@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import styles from '../styles/Navbar.module.css';
 
 const links = [
   { path: '/', text: 'Books' },
@@ -6,14 +7,14 @@ const links = [
 ];
 
 const Navbar = () => (
-  <header>
-    <nav className="container padding-x">
+  <header className={styles.header}>
+    <nav className={`${styles.nav} container padding-x flex flex-ai-c`}>
       <span>
-        <NavLink to={links[0].path} style={{ backgroundColor: 'transparent', borderTop: 'none' }}>
-          Bookstore
+        <NavLink to={links[0].path} className={styles.logo} style={{ border: 0, color: '#3183ed' }}>
+          Bookstore Miles
         </NavLink>
       </span>
-      <ul>
+      <ul className={`${styles.links} flex flex-ai-fe`}>
         {links.map((link) => (
           <li key={link.text}>
             <NavLink to={link.path} className={({ isActive }) => (isActive ? 'active' : undefined)}>

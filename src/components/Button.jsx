@@ -1,7 +1,16 @@
 import PropTypes from 'prop-types';
 
-function Button({ type, value, handleClick }) {
-  return <input type={type ?? 'button'} value={value ?? 'Click me!'} onClick={handleClick} />;
+function Button({
+  type, value, handleClick, className,
+}) {
+  return (
+    <input
+      type={type ?? 'button'}
+      className={className}
+      value={value ?? 'Click me!'}
+      onClick={handleClick}
+    />
+  );
 }
 
 Button.propTypes = {

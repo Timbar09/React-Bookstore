@@ -3,20 +3,30 @@ import { useSelector } from 'react-redux';
 import Book from '../components/Book';
 import Form from '../components/Form';
 
+import styles from '../styles/Books.module.css';
+
 const Books = () => {
   const { books, isLoading } = useSelector((state) => state.books);
 
   if (isLoading) {
     return (
-      <main>
-        <h1>Loading...</h1>
-      </main>
+      <div className={`${styles.loading} container padding`}>
+        <div className={styles.spinner}>
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
+      </div>
     );
   }
 
   return (
-    <main>
-      <section style={{ border: 'solid 1px', padding: '1rem' }}>
+    <div
+      className={`${styles.home} container padding-x`}
+      style={{ maxWidth: '70em', margin: 'auto' }}
+    >
+      <section className={styles.books}>
         <ul>
           {books.map((book) => (
             <Book key={book.id} book={book} />
@@ -24,7 +34,7 @@ const Books = () => {
         </ul>
       </section>
       <Form />
-    </main>
+    </div>
   );
 };
 

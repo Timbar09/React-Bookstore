@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import { addBook, addBookUI } from '../redux/books/booksSlice';
 import Button from './Button';
 
+import styles from '../styles/Form.module.css';
+
 const Form = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
@@ -36,15 +38,34 @@ const Form = () => {
   };
 
   return (
-    <section style={{ padding: '1rem' }}>
-      <form style={{ display: 'flex', gap: '1rem' }} onSubmit={handleSubmit}>
-        <input type="text" placeholder="Book title" value={title} onChange={handleTitle} />
+    <section className={styles.formSection}>
+      <h2 className={styles.formTitle}>ADD NEW BOOK</h2>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={styles.left}>
+          <input
+            className={`${styles.title} ${styles.input}`}
+            name="book_title"
+            type="text"
+            placeholder="Book title"
+            value={title}
+            onChange={handleTitle}
+          />
+        </div>
 
-        <input type="text" placeholder="Book Author" value={author} onChange={handleAuthor} />
+        <div className={styles.right}>
+          <input
+            className={`${styles.author} ${styles.input}`}
+            type="text"
+            name="book_author"
+            placeholder="Book Author"
+            value={author}
+            onChange={handleAuthor}
+          />
 
-        <Button type="submit" value="Add Book" />
+          <Button type="submit" value="Add Book" className={styles.buttonAdd} />
+        </div>
       </form>
-      <span>{message}</span>
+      <span className={styles.errorMessage}>{message}</span>
     </section>
   );
 };

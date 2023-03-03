@@ -1,19 +1,11 @@
+import styles from '../styles/NotMatch.module.css';
+
 const NotMatch = () => (
-  <div
-    style={{
-      maxHeight: '25rem',
-      height: '95vh',
-      display: 'grid',
-      placeItems: 'center',
-    }}
-  >
-    <p
-      style={{
-        fontSize: '3rem',
-      }}
-    >
-      Not found!
-    </p>
+  <div className={styles.notMatch}>
+    <div>
+      <h1 className={styles.title}>404</h1>
+      <p className={styles.description}>Not found!</p>
+    </div>
   </div>
 );
 

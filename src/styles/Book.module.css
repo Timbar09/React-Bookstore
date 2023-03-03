@@ -1,0 +1,157 @@
+.book {
+  padding: 1.5rem 3rem;
+  border-radius: 0.25em;
+  border: solid 1px var(--clr-light-grey);
+  background-color: var(--clr-white);
+}
+
+@media (min-width: 43em) {
+  .book {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.book:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.bookCategory,
+.bookAuthor {
+  font-size: 0.8rem;
+}
+
+.bookCategory {
+  font-weight: 600;
+}
+
+.bookTitle {
+  line-height: 1.1;
+  font-size: 1.35rem;
+}
+
+.bookAuthor {
+  color: var(--clr-blue);
+}
+
+.interactButtons {
+  padding-top: 0.5rem;
+}
+
+.buttonInteract,
+.buttonUpdate {
+  font-family: inherit;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.buttonInteract {
+  padding: 0.05rem 0.5rem 0.05rem 0;
+  line-height: 1.1;
+  color: var(--clr-blue);
+}
+
+.buttonInteract:not(:first-child) {
+  padding-left: 0.55rem;
+  border-left: solid 2px var(--clr-light-grey);
+}
+
+.right {
+  gap: 2rem;
+}
+
+.progress {
+  gap: 1rem;
+}
+
+.completeStatus {
+  padding-top: 0.25rem;
+}
+
+.completeStatus p {
+  line-height: 1;
+}
+
+.completeStatus p:first-child {
+  font-size: 1.25rem;
+  color: var(--clr-dark);
+}
+
+.completeStatus p:last-child {
+  font-size: 0.85rem;
+}
+
+.buttonDelete:hover {
+  color: rgb(232, 16, 16);
+}
+
+.progressCircle {
+  position: relative;
+}
+
+.progressCircle svg {
+  width: 3.25em;
+}
+
+.circleTwo {
+  position: absolute;
+  inset: 0;
+}
+
+.circleOne circle {
+  fill: none;
+  stroke: var(--clr-light-grey);
+  stroke-width: 3;
+  stroke-dasharray: 124, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+}
+
+.circleTwo circle {
+  fill: none;
+  stroke: hsl(214, 97%, 59%);
+  stroke-width: 3;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+}
+
+.separator {
+  width: 2px;
+  height: 4rem;
+  background-color: var(--clr-light-grey);
+}
+
+.chaptertitle {
+  line-height: 1;
+}
+
+.chapterCurrent {
+  margin-bottom: 0.75rem;
+  line-height: 1;
+  color: var(--clr-dark);
+}
+
+.buttonUpdate {
+  padding: 0.3em 2em;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--clr-white);
+  border-radius: 0.25rem;
+  outline: solid 2px transparent;
+  outline-offset: -2px;
+  background-color: var(--clr-blue);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    outline 150ms ease-in-out,
+    outline-offset 150ms ease-in-out,
+    opacity 150ms ease-in-out,
+    opacity 150ms ease-in-out;
+}
+
+.buttonUpdate:hover,
+.buttonUpdate:focus {
+  opacity: 0.8;
+  outline: solid 2px var(--clr-blue);
+  outline-offset: 2px;
+}

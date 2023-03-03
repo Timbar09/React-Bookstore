@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+.header {
+  background-color: var(--clr-white);
+  margin-bottom: 1rem;
+  border-bottom: solid 1px var(--clr-light-grey);
+}
+
+.nav {
+  gap: 2.5rem;
+}
+
+.logo {
+  font-family: 'Monoton', cursive;
+  font-size: 2em;
+  line-height: 1.4;
+  color: var(--clr-blue);
+  padding-bottom: 0.25em;
+}
+
+.links {
+  gap: 2.5rem;
+  font-size: 1.05em;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.links a {
+  padding: 1.5rem 0.5rem;
+  transition: color 150ms ease-in-out;
+}
+
+.links a:hover {
+  color: var(--clr-dark);
+}

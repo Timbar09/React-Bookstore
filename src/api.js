@@ -18,7 +18,7 @@ const storeBook = async (book) => {
   bookCopy.item_id = bookCopy.id;
   const data = {
     ...bookCopy,
-    category: 'Unknown',
+    category: 'Category',
   };
 
   await fetch(BOOKS_URL, {
